@@ -21,7 +21,7 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
 fi
 
 # 3. Копирование конфигов
-CONFIG_FOLDERS=("hypr" "waybar" "kitty" "fuzzel" "dunst" "nvim" "gtk-3.0" "gtk-4.0")
+CONFIG_FOLDERS=("hypr" "waybar" "kitty" "fuzzel" "dunst" "nvim")
 mkdir -p ~/.config
 
 for folder in "${CONFIG_FOLDERS[@]}"; do
@@ -38,10 +38,5 @@ if [ -f "$DOTFILES_DIR/.zshrc" ]; then
     cp "$DOTFILES_DIR/.zshrc" "$HOME/"
 fi
 
-# 5. Тема курсора
-mkdir -p ~/.icons/default
-if [ -f "$DOTFILES_DIR/.icons/default/index.theme" ]; then
-    cp "$DOTFILES_DIR/.icons/default/index.theme" "$HOME/.icons/default/"
-fi
 
 echo "--- Готово! Перезапусти терминал. ---"
