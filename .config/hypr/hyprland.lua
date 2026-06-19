@@ -16,10 +16,10 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "eDP-1",
-    mode     = "1920x1200@120",
+    output   = "",
+    mode     = "preferred",
     position = "auto",
-    scale    = "1.5",
+    scale    = "auto",
 })
 
 
@@ -43,7 +43,6 @@ local browser     = "google-chrome-stable"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-   hl.exec_cmd("nm-applet")
    hl.exec_cmd(terminal)
    hl.exec_cmd("wl-clipboard")
    hl.exec_cmd("waybar & hyprpaper &")
@@ -51,10 +50,8 @@ hl.on("hyprland.start", function ()
    hl.exec_cmd("discord")
    hl.exec_cmd(browser)
    hl.exec_cmd("dunst -conf ~/.config/dunst/dunstrc")
-   hl.exec_cmd("/usr/lib/hyprpolkitagent/hyprpolkitagent")
    hl.exec_cmd("wl-paste --type text --watch cliphist store &")
    hl.exec_cmd("wl-paste --type image --watch cliphist store &")
-   hl.exec_cmd("xrdb -merge ~/.Xresources")
 end)
 
 
@@ -69,14 +66,9 @@ hl.env("XCURSOR_SIZE", "20")
 hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("HYPRCURSOR_SIZE", "20")
 hl.env("GTK_THEME", "Materia-dark")
-hl.env("QT_QPA_PLATFORMTHEME", "qt5ct") -- Нужно установить пакет qt5ct и qt6ct
-hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
-hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
-hl.env("LANG", "ru_RU.UTF-8")
-hl.env("LC_ALL", "ru_RU.UTF-8")
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
@@ -295,8 +287,7 @@ end
 -- Example special workspace (scratchpad)
 
 -- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
+
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
