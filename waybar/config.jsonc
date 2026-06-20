@@ -20,17 +20,17 @@
 
     "cpu": {
         "format": "CPU: {usage}%",
-        "interval": 2
+        "on-click": "kitty -e btop" // или foot -e btop
     },
 
     "memory": {
         "format": "MEM: {used:0.1f}GB",
-        "interval": 5
+        "on-click": "kitty -e btop"
     },
 
     "temperature": {
-        "critical-threshold": 80,
-        "format": " {temperatureC}°C"
+        "format": " {temperatureC}°C",
+        "on-click": "kitty -e btop"
     },
 
     "clock": {
@@ -42,14 +42,15 @@
         "format-wifi": " {essid}",
         "format-ethernet": "󰈀 Wired",
         "format-disconnected": "󰖪 Off",
-        "on-click": "nm-connection-editor"
+        "on-click": "nm-connection-editor" // откроет настройки Wi-Fi
     },
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-muted": "󰝟 Muted",
         "format-icons": { "default": ["", "", ""] },
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click": "pavucontrol", // ЛКМ - настройки звука
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle", // ПКМ - Мут звука
         "scroll-step": 5
     },
 
@@ -57,11 +58,11 @@
         "format": "{format_source}",
         "format-source": " {volume}%",
         "format-source-muted": " Muted",
-        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click": "pavucontrol", // ЛКМ - настройки звука
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle", // ПКМ - Мут микрофона
         "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
         "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%"
     },
-
     "tray": {
         "icon-size": 16,
         "spacing": 12
