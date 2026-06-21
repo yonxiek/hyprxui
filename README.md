@@ -80,4 +80,5 @@ sudo pacman -S --needed < packages.txt
 yay -S --needed < aur_packages.txt
 ```
 <p align="center">Made with 🖤 by yonxiek</p>
-![🖤](./.config/hypr/wp/vid1.mp4)
+
+![🖤](.config/hypr/wp/vid1.mp4)
