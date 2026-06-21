@@ -17,9 +17,9 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
     output   = "",
-    mode     = "preferred",
+    mode     = "prefered",
     position = "auto",
-    scale    = "auto",
+    scale    = "2",
 })
 
 
@@ -45,13 +45,14 @@ local browser     = "google-chrome-stable"
 hl.on("hyprland.start", function () 
    hl.exec_cmd(terminal)
    hl.exec_cmd("wl-clipboard")
-   hl.exec_cmd("waybar & hyprpaper &")
+   hl.exec_cmd("waybar &")
    hl.exec_cmd("tg-ws-proxy")
    hl.exec_cmd("discord")
    hl.exec_cmd(browser)
    hl.exec_cmd("dunst -conf ~/.config/dunst/dunstrc")
    hl.exec_cmd("wl-paste --type text --watch cliphist store &")
    hl.exec_cmd("wl-paste --type image --watch cliphist store &")
+   hl.exec_cmd('mpvpaper -o "--loop --no-audio --hwdec=auto --panscan=1.0" eDP-1 ~/.config/hypr/wp/vid1.mp4')
 end)
 
 
@@ -60,12 +61,6 @@ end)
 -------------------------------
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
-
-hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
-hl.env("XCURSOR_SIZE", "20")
-hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
-hl.env("HYPRCURSOR_SIZE", "20")
-hl.env("GTK_THEME", "Materia-dark")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
