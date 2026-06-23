@@ -1,0 +1,14 @@
+{
+  "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
+  "atone.nvim": { "branch": "main", "commit": "db99dda557d702ecb72ab86b26b7e5b38b6dcade" },
+  "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
+  "lualine.nvim": { "branch": "master", "commit": "221ce6b2d999187044529f49da6554a92f740a96" },
+  "neocord": { "branch": "main", "commit": "4cf99993826a1d555294a2f152804bcdce9be2e6" },
+  "nvim-autopairs": { "branch": "master", "commit": "7b9923abad60b903ece7c52940e1321d39eccc79" },
+  "nvim-spectre": { "branch": "master", "commit": "72f56f7585903cd7bf92c665351aa585e150af0f" },
+  "nvim-web-devicons": { "branch": "master", "commit": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c" },
+  "ruscmd.nvim": { "branch": "main", "commit": "06dd5ed6a74bde65ab2c19d1a7df260d054bf3b3" },
+  "scrollbar.nvim": { "branch": "master", "commit": "c96fc2fb1a3b5a9e6e82d94014490d5bca9beb9b" },
+  "toggleterm.nvim": { "branch": "main", "commit": "9a88eae817ef395952e08650b3283726786fb5fb" },
+  "trailblazer.nvim": { "branch": "main", "commit": "5c0e3ac01e227bb9afe428583f29f0ec34801408" }
+}
